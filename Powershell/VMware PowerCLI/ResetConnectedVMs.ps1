@@ -33,7 +33,7 @@ foreach ($server in $servers) {
     $HorizonQuery.QueryEntityType = 'SessionLocalSummaryView'
     $QueryFilterEquals = New-Object VMware.Hv.QueryFilterEquals
     $QueryFilterEquals.MemberName = 'namesData.userName'
-    $QueryFilterEquals.value = "morgancollinggilbert.com\$Username"
+    $QueryFilterEquals.value = "$domain\$username"
     $HorizonQuery.Filter = $QueryFilterEquals
     $HorizonQueryService = New-Object VMware.Hv.QueryServiceService
     # Grab Results from Query
